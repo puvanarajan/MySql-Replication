@@ -11,9 +11,10 @@ Slave server C  : **192.168.1.12** <br>
 Step 1: Install the mysql server<br>
   >yum install mysql-server <br>
   >chkconfig mysqld on
-
-Step 2: We need to restart the MySql server
-  service mysqld start
-
-Step 3: 
+<br>
+Step 2: We need to restart the MySql server <br>
+  >service mysqld start
+<br>
+Step 3: After the mysqld service has been started, set your mysql server root password by using following commands <br>
+  >sudo /usr/bin/mysql_secure_installation
 
