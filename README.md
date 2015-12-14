@@ -5,7 +5,7 @@
 
 >Here I am using three servers.
 
--Master Server A = **192.168.1.10**
+-Master Server A = **192.168.1.10** <br>
 -Slave server B = **192.168.1.11**
 -Slave server C = **192.168.1.12**
 
