@@ -141,12 +141,13 @@ Step 5: Restart MySql server
     
 Step 6: Open MySQL shell again
 
-    #CHANGE MASTER TO MASTER_HOST='192.168.1.10',MASTER_USER='slave_user', MASTER_PASSWORD='slave_user_password',          MASTER_LOG_FILE='mysql-bin.000123', MASTER_LOG_POS=  111;
+    #CHANGE MASTER TO MASTER_HOST='192.168.1.10',MASTER_USER='slave_user', MASTER_PASSWORD='slave_user_password',        
+    MASTER_LOG_FILE='mysql-bin.000123', MASTER_LOG_POS=  111;
     # START SLAVE;
     # SHOW SLAVE STATUS\G
-    
+    OUTPUT LIKE THIS
     mysql> SHOW SLAVE STATUS\G
-*************************** 1. row ***************************
+    *************************** 1. row ***************************
                Slave_IO_State: Waiting for master to send event
                   Master_Host: 88.208.192.220
                   Master_User: badb2015
@@ -164,7 +165,7 @@ Step 6: Open MySQL shell again
            Replicate_Do_Table: 
        Replicate_Ignore_Table: 
       Replicate_Wild_Do_Table: 
-  Replicate_Wild_Ignore_Table: 
+      Replicate_Wild_Ignore_Table: 
                    Last_Errno: 0
                    Last_Error: 
                  Skip_Counter: 0
@@ -180,9 +181,14 @@ Step 6: Open MySQL shell again
             Master_SSL_Cipher: 
                Master_SSL_Key: 
         Seconds_Behind_Master: 0
-Master_SSL_Verify_Server_Cert: No
+        Master_SSL_Verify_Server_Cert: No
                 Last_IO_Errno: 0
                 Last_IO_Error: 
                Last_SQL_Errno: 0
                Last_SQL_Error: 
-1 row in set (0.00 sec)
+               1 row in set (0.00 sec)
+
+ **NOTE : If your are using plesk, you can use this command**
+ If slave already running it is giving the error. So if their any error use STOP SLAVE and try Step 6 again
+ 
+ **DO SAME AS SERVER C and etc...**
