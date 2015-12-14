@@ -1,12 +1,11 @@
 # MySqlReplication
 
     This is small tutorial for MySql replication
+        >Here I am using three servers.
 
->Here I am using three servers.
-
-Master Server A : **192.168.1.10** <br>
-Slave server B  : **192.168.1.11** <br>
-Slave server C  : **192.168.1.12** <br>
+        Master Server A : **192.168.1.10** <br>
+        Slave server B  : **192.168.1.11** <br>
+        Slave server C  : **192.168.1.12** <br>
 
 **IF MYSQL SERVER ALREADY INSTALLED PLEASE AVOID STEP 1 TO 4**
 **IF MYSQL SERVER DON'T HAVE ANY EXTERNAL ACCESSING YOU HAVE TO DO THE STEP 4**<br><br>
