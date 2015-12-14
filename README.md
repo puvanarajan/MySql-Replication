@@ -6,11 +6,12 @@
         Slave server C  : **192.168.1.12**
 
 **IF MYSQL SERVER ALREADY INSTALLED PLEASE AVOID STEP 1 TO 4**
-**IF MYSQL SERVER DON'T HAVE ANY EXTERNAL ACCESSING YOU HAVE TO DO THE STEP 4**<br><br>
-Step 1: Install the mysql server<br>
-        yum install mysql-server <br>
-        chkconfig mysqld on
-<br>
+**IF MYSQL SERVER DON'T HAVE ANY EXTERNAL ACCESSING YOU HAVE TO DO THE STEP 4**
+
+Step 1: Install the mysql server
+
+    #yum install mysql-server 
+    #chkconfig mysqld on
 
 Step 2: We need to restart the MySql server <br>
   >service mysqld start
