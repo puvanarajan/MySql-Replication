@@ -48,6 +48,7 @@ Step 6: Restart MySql server <br>
   <br>
   
 Step 7: Open MySQL shell and login <br>
+
     >mysql -u root -p <br>
     
     **NOTE : If your are using plesk, you can use this command**<br>
