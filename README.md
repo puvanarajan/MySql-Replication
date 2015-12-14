@@ -77,14 +77,14 @@ Step 8: We need to grant privileges to the slave. You can use this line to name 
 <br>This is the position from which the slave database will start replicating. Record these numbers, they will come in useful later.
 
 Step 9: Open new tap (Please keep the MySQL shell)
-  >mysqldump -u root -p --opt mydb > mydb.sql
-  <br> If you are using plesk 
-  >mysqldump -uadmin -p`cat /etc/psa/.psa.shadow` --option mydb > mydb.sql
 
-<br>
+    #mysqldump -u root -p --opt mydb > mydb.sql
+    
+If you are using plesk
+
+    #mysqldump -uadmin -p`cat /etc/psa/.psa.shadow` --option mydb > mydb.sql
 
 Step 10: After step 9 process completed go to the previous window (MySQL shell window)
-<br>
->UNLOCK TABLES;
-<br>
->quit;
+
+    #UNLOCK TABLES;
+    #quit;
