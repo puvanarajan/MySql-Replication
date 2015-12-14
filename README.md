@@ -20,3 +20,7 @@ Step 2: We need to restart the MySql server <br>
 Step 3: After the mysqld service has been started, set your mysql server root password by using following commands <br>
   >sudo /usr/bin/mysql_secure_installation
 
+Step 4: Server we need give the port accessing permission. By default MySql server is using port 3306. So we need to add this port iptable.<br> 
+NOTE: If you change the default port, then you have to add the default port to iptables.<br>
+  >iptables -I RH-Firewall-1-INPUT 10 -p tcp --dport 3306 -j ACCEPT <br>
+  >service iptables save 
