@@ -58,7 +58,7 @@ Step 7: Open MySQL shell and login
   
 Step 8: We need to grant privileges to the slave. You can use this line to name your slave and set up their password. The command should be in this format
 
-    #GRANT REPLICATION SLAVE ON *.* TO 'slave_user'@'%' IDENTIFIED BY 'password';
+    #GRANT REPLICATION SLAVE ON *.* TO 'slave_user'@'%' IDENTIFIED BY 'slave_user_password';
     #FLUSH PRIVILEGES;
     #USE mydb;
 <br>Following that, lock the database to prevent any new changes:
@@ -89,3 +89,10 @@ Step 10: After step 9 process completed go to the previous window (MySQL shell w
 
     #UNLOCK TABLES;
     #quit;
+
+Step 11: Copy the file to slave server
+
+    scp /path/for/mydb.sql user@192.168.1.11:/root/
+    Here 192.168.1.11 is slave server ip and 'user' is slave server user. 
+    
+##### Slave server configuration #####
