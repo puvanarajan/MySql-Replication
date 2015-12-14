@@ -10,8 +10,8 @@ Slave server B  : **192.168.1.11** <br>
 Slave server C  : **192.168.1.12** <br>
 
 Step 1: Install the mysql server<br>
-  > yum install mysql-server <br>
-  > chkconfig mysqld on
+  >yum install mysql-server <br>
+  >chkconfig mysqld on
 
 Step 2: We need to restart the MySql server
   service mysqld start
