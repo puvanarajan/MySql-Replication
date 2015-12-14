@@ -1,7 +1,7 @@
 # MySqlReplication
+================
 
-    This is small tutorial for MySql replication
-    >Here I am using three servers.
+    This is small tutorial for MySql replication. Here I am using three servers.
 
         Master Server A : **192.168.1.10** <br>
         Slave server B  : **192.168.1.11** <br>
