@@ -149,18 +149,18 @@ Step 6: Open MySQL shell again
     mysql> SHOW SLAVE STATUS\G
     *************************** 1. row ***************************
                Slave_IO_State: Waiting for master to send event
-                  Master_Host: 88.208.192.220
-                  Master_User: badb2015
-                  Master_Port: 3306
+                  Master_Host: xxxxx.xxx.xxx
+                  Master_User: xxxxxxxx
+                  Master_Port: 2323
                 Connect_Retry: 60
-              Master_Log_File: mysql-bin.000019
-          Read_Master_Log_Pos: 38646183
-               Relay_Log_File: mysql-relay-bin.000005
-                Relay_Log_Pos: 13582866
-        Relay_Master_Log_File: mysql-bin.000019
+              Master_Log_File: mysql-bin.232323
+          Read_Master_Log_Pos: 23
+               Relay_Log_File: mysql-relay-bin.232323
+                Relay_Log_Pos: 23233
+        Relay_Master_Log_File: mysql-bin.0000233
              Slave_IO_Running: Yes
             Slave_SQL_Running: Yes
-              Replicate_Do_DB: dnjaffnabat
+              Replicate_Do_DB: mydb
           Replicate_Ignore_DB: 
            Replicate_Do_Table: 
        Replicate_Ignore_Table: 
@@ -169,8 +169,8 @@ Step 6: Open MySQL shell again
                    Last_Errno: 0
                    Last_Error: 
                  Skip_Counter: 0
-          Exec_Master_Log_Pos: 38646183
-              Relay_Log_Space: 15535821
+          Exec_Master_Log_Pos: 232323
+              Relay_Log_Space: 43434
               Until_Condition: None
                Until_Log_File: 
                 Until_Log_Pos: 0
