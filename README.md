@@ -1,14 +1,13 @@
 # MySqlReplication
 
-Hi All 
+###Hi All 
+#####This is small tutorial for MySql replication
 
-This is small tutorial for MySql replication
+>Here I am using two servers.
 
-Here I am using two servers.
-
-Master Server A = 192.168.1.10
-Slave server B = 192.168.1.11
-Slave server C = 192.168.1.12
+>Master Server A = 192.168.1.10
+>Slave server B = 192.168.1.11
+>Slave server C = 192.168.1.12
 
 
 Step 1: Install the mysql server
