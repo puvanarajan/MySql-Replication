@@ -8,6 +8,7 @@
 **IF MYSQL SERVER ALREADY INSTALLED PLEASE AVOID STEP 1 TO 4**
 **IF MYSQL SERVER DON'T HAVE ANY EXTERNAL ACCESSING YOU HAVE TO DO THE STEP 4**
 
+##### Master server configuration #####
 Step 1: Install the mysql server
 
     #yum install mysql-server 
