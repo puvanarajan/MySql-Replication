@@ -8,8 +8,8 @@
 **IF MYSQL SERVER ALREADY INSTALLED PLEASE AVOID STEP 1 TO 4**
 **IF MYSQL SERVER DON'T HAVE ANY EXTERNAL ACCESSING YOU HAVE TO DO THE STEP 4**<br><br>
 Step 1: Install the mysql server<br>
-  >yum install mysql-server <br>
-  >chkconfig mysqld on
+        yum install mysql-server <br>
+        chkconfig mysqld on
 <br>
 
 Step 2: We need to restart the MySql server <br>
