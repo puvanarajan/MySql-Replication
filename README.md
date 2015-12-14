@@ -8,6 +8,8 @@ Master Server A : **192.168.1.10** <br>
 Slave server B  : **192.168.1.11** <br>
 Slave server C  : **192.168.1.12** <br>
 
+**IF MYSQL SERVER ALREADY INSTALLED PLEASE AVOID STEP 1 TO 4**
+**IF MYSQL SERVER DON'T HAVE ANY EXTERNAL ACCESSING YOU HAVE TO DO THE STEP 4**<br>
 Step 1: Install the mysql server<br>
   >yum install mysql-server <br>
   >chkconfig mysqld on
