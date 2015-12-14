@@ -43,5 +43,14 @@ Step 5: Edit my.cnf file and add the following entries. Here you can use your fa
   >relay-log-info-file = /var/lib/mysql/mysql-relay-log.info<br>
   >log-bin = /var/lib/mysql/mysql-bin<br>
   
+Step 6: Restart MySql server <br>
+  >service mysqld restart
+  <br>
+  
+Step 7: Open MySQL shell and login <br>
+    >mysql -u root -p <br>
+    
+    **NOTE : If your are using plesk, you can use this command**<br>
+    >mysql -uadmin -p`cat /etc/psa/.psa.shadow`
   
 
