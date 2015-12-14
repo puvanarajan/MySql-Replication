@@ -96,3 +96,93 @@ Step 11: Copy the file to slave server
     Here 192.168.1.11 is slave server ip and 'user' is slave server user. 
     
 ##### Slave server configuration #####
+Step 1: Open the MySQL shell
+
+    #mysql -u root -p <br>
+
+   **NOTE : If your are using plesk, you can use this command**
+
+    #mysql -uadmin -p`cat /etc/psa/.psa.shadow`
+
+Step 2: Create the database
+
+    #CREATE DATABASE mydb;
+    #EXIT;
+    
+Step 3: Import the database that you previously exported from the master database.
+
+    #mysql -u root -p mydb < /path/to/mydb.sql
+    
+     **NOTE : If your are using plesk, you can use this command**
+
+    #mysql -uadmin -p`cat /etc/psa/.psa.shadow` mydb < /path/to/mydb.sql
+    
+Step 4: Now we need to configure the slave configuration in the same way as we did the master
+
+    #vi /etc/my.cnf
+  and check follwing lines
+
+    server-id = 2
+    master-host=192.168.1.10
+    master-connect-retry=60
+    master-user=slave_user
+    master-password=slave_user_password
+    replicate-do-db=mydb
+    relay-log = /var/lib/mysql/mysql-relay-bin
+    relay-log-index = /var/lib/mysql/mysql-relay-bin.index
+    log-error = /var/lib/mysql/mysql.err
+    master-info-file = /var/lib/mysql/mysql-master.info
+    relay-log-info-file = /var/lib/mysql/mysql-relay-log.info
+    log-bin = /var/lib/mysql/mysql-bin
+    
+Step 5: Restart MySql server
+
+    #service mysqld restart
+    
+Step 6: Open MySQL shell again
+
+    #CHANGE MASTER TO MASTER_HOST='192.168.1.10',MASTER_USER='slave_user', MASTER_PASSWORD='slave_user_password',          MASTER_LOG_FILE='mysql-bin.000123', MASTER_LOG_POS=  111;
+    # START SLAVE;
+    # SHOW SLAVE STATUS\G
+    
+    mysql> SHOW SLAVE STATUS\G
+*************************** 1. row ***************************
+               Slave_IO_State: Waiting for master to send event
+                  Master_Host: 88.208.192.220
+                  Master_User: badb2015
+                  Master_Port: 3306
+                Connect_Retry: 60
+              Master_Log_File: mysql-bin.000019
+          Read_Master_Log_Pos: 38646183
+               Relay_Log_File: mysql-relay-bin.000005
+                Relay_Log_Pos: 13582866
+        Relay_Master_Log_File: mysql-bin.000019
+             Slave_IO_Running: Yes
+            Slave_SQL_Running: Yes
+              Replicate_Do_DB: dnjaffnabat
+          Replicate_Ignore_DB: 
+           Replicate_Do_Table: 
+       Replicate_Ignore_Table: 
+      Replicate_Wild_Do_Table: 
+  Replicate_Wild_Ignore_Table: 
+                   Last_Errno: 0
+                   Last_Error: 
+                 Skip_Counter: 0
+          Exec_Master_Log_Pos: 38646183
+              Relay_Log_Space: 15535821
+              Until_Condition: None
+               Until_Log_File: 
+                Until_Log_Pos: 0
+           Master_SSL_Allowed: No
+           Master_SSL_CA_File: 
+           Master_SSL_CA_Path: 
+              Master_SSL_Cert: 
+            Master_SSL_Cipher: 
+               Master_SSL_Key: 
+        Seconds_Behind_Master: 0
+Master_SSL_Verify_Server_Cert: No
+                Last_IO_Errno: 0
+                Last_IO_Error: 
+               Last_SQL_Errno: 0
+               Last_SQL_Error: 
+1 row in set (0.00 sec)
