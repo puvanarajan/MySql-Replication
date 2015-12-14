@@ -29,16 +29,19 @@ Step 4: Server we need give the port accessing permission. By default MySql serv
   <br>
 
 Step 5: Edit my.cnf file and add the following entries. Here you can use your favourite editor. I am using VI editor<br>
-  >vi /etc/my.cnf <br> and check following lines
+  >vi /etc/my.cnf <br>
+  and check following lines
   <br>
-  [mysqld]
-bind-address=192.168.1.10 #MASTER SERVER ADDRESS
-server-id = 1 #UNIQUE ID
-binlog-do-db=mydb #DATABASE NAME
-relay-log = /var/lib/mysql/mysql-relay-bin
-relay-log-index = /var/lib/mysql/mysql-relay-bin.index
-log-error = /var/lib/mysql/mysql.err
-master-info-file = /var/lib/mysql/mysql-master.info
-relay-log-info-file = /var/lib/mysql/mysql-relay-log.info
-log-bin = /var/lib/mysql/mysql-bin
+  >[mysqld]
+  >bind-address=192.168.1.10 #MASTER SERVER ADDRESS<br>
+  >server-id = 1 #UNIQUE ID<br>
+  >binlog-do-db=mydb #DATABASE NAME<br>
+  >relay-log = /var/lib/mysql/mysql-relay-bin<br>
+  >relay-log-index = /var/lib/mysql/mysql-relay-bin.index<br>
+  >log-error = /var/lib/mysql/mysql.err<br>
+  >master-info-file = /var/lib/mysql/mysql-master.info<br>
+  >relay-log-info-file = /var/lib/mysql/mysql-relay-log.info<br>
+  >log-bin = /var/lib/mysql/mysql-bin<br>
+  
+  
 
