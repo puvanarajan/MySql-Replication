@@ -1,6 +1,6 @@
 # MySqlReplication
 
-######This is small tutorial for MySql replication
+###### This is small tutorial for MySql replication
 
 >Here I am using three servers.
 
