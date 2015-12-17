@@ -83,7 +83,7 @@ Step 9: Open new tap (Please keep the MySQL shell)
     
 If you are using plesk
 
-    #mysqldump -uadmin -p`cat /etc/psa/.psa.shadow` --option mydb > mydb.sql
+    #mysqldump -uadmin -p`cat /etc/psa/.psa.shadow` --opt mydb > mydb.sql
 
 Step 10: After step 9 process completed go to the previous window (MySQL shell window)
 
